@@ -30,9 +30,24 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+assets:
+  source_maps: true # false on JEKYLL_ENV=production
+  destination: "/assets"
+  compression: false # true on JEKYLL_ENV=production
+  sources:
+    - assets/css
+    - assets/images
+    - assets/js
+  compress:
+    css:  true
+    js:   uglifier
 
 # Exclude from processing.
 # The following items will not be processed, by default.
