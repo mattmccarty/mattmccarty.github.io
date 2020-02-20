@@ -1,24 +1,12 @@
-@font-face {
-	font-family: 'linecons';
-	src:url('../fonts/linecons/linecons.eot');
-	src:url('../fonts/linecons/linecons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/linecons/linecons.woff') format('woff'),
-		url('../fonts/linecons/linecons.ttf') format('truetype'),
-		url('../fonts/linecons/linecons.svg#linecons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 .icon:before {
-	font-family: 'linecons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	display: inline-block;
-	margin-right: 0.6em;
+	font-family           : 'Font Awesome 5 Free';
+	font-style            : normal;
+	font-weight           : 900;
+	font-variant          : normal;
+	text-transform        : none;
+	line-height           : 1;
+	display               : inline-block;
+	margin-right          : 0.6em;
 	-webkit-font-smoothing: antialiased;
 }
 .icon-female:before {
@@ -28,7 +16,19 @@
 	content: "\f183";
 }
 .icon-arrow-left:before {
-	content: "\e032";
+	content: "\f053";
+}
+.icon-home:before {
+	content: "\f015";
+}
+.icon-bars:before {
+	content: "\f0c9";
+}
+.icon-stack:before {
+	content: "\f5fd";
+}
+.icon-kubernetes:before {
+	content: "\f655";
 }
 .icon-arrow-left-2:before {
 	content: "\e034";
@@ -117,9 +117,6 @@
 }
 .icon-video:before {
 	content: "\e015";
-}
-.icon-stack:before {
-	content: "\e016";
 }
 .icon-lab:before {
 	content: "\e017";
