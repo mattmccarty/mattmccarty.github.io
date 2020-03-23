@@ -1,0 +1,28 @@
+html, body {
+    width   : 100%;
+    height  : 100vh;
+    padding : 0;
+    margin  : 0;
+}
+
+header {
+    width: 100%;
+}
+
+.main-container {
+    width  : 100%;
+    height : 100vh;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+}
+
+.main-content {
+    width     : 100%;
+    padding   : .75rem 1rem;
+}
+
+@import 'highlight';
+@import 'icons';
+@import '_components/navbar';
+@import '_components/sidebar';

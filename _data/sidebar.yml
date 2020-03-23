@@ -1,0 +1,26 @@
+wiki:
+    - title   : DevOps
+      icon    : rocket
+
+    - title   : Programming
+      icon    : code
+      children:
+        - title: Cras justo odio
+        - title: Dapibus ac facilisis in
+          children:
+              - title: Cras justo odio
+              - title: Dapibus ac facilisis in
+              - title: Vestibulum at eros
+                children:
+                  - title: Cras justo odio
+                    children:
+                      - title: Cras justo odio
+                        children:
+                          - title: Cras justo odio
+                          - title: Dapibus ac facilisis in
+                          - title: Vestibulum at eros
+                      - title: Dapibus ac facilisis in
+                      - title: Vestibulum at eros
+                  - title: Dapibus ac facilisis in
+                  - title: Vestibulum at eros
+        - title: Vestibulum at eros

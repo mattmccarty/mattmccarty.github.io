@@ -1,0 +1,21 @@
+<ul class="list-group">
+  {% for item in site.data.sidebar.wiki %}
+    <li>
+      <div class="list-group-item list-group-item-action d-inline-flex">
+        <div class="title mr-auto">
+          <i class="{{ item.icon }}"></i>{{ item.title }}
+        </div>
+        <div class="state-icon">
+          {%- if item.children -%}
+          <i class="com-nav-tree-item-closed"></i>
+          {%- else -%}
+          <i class=""></i>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- if item.children -%}
+      {%- include wiki/{{ site.ui.framework.name }}/sidebar/children.html items=item.children -%}
+      {%- endif -%}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,60 @@
+body.ui-fw-bootstrap {
+    nav.sidebar-ext {
+        max-width : 100%;
+        height    : 100%;
+    }
+
+    nav.sidebar-ext .sidebar-container {
+        width : 100%;
+        height: 100%;
+    }
+
+    nav.sidebar-ext .card {
+        border-radius: 0;
+    }
+
+    nav.sidebar-ext ul.list-group {
+        list-style: none;
+    }
+
+    nav.sidebar-ext ul.list-group .list-group-item {
+        min-width: 15rem;
+        cursor   : pointer;
+    }
+
+    nav.sidebar-ext ul.list-group .list-group-item i {
+        margin-right: .75rem;
+    }
+
+    nav.sidebar-ext ul.list-group .list-group-item .title {
+        white-space: nowrap;
+        width      : auto;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group {
+        display     : none;
+        padding-left: .25rem;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group ul.list-group {
+        padding-left: 1.25rem;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group li:first-child {
+        border-top: 1px solid gray;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group .list-group-item {
+        border: 0;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group i {
+        font-size     : .25rem;
+        text-align    : center;
+        vertical-align: middle;
+    }
+
+    nav.sidebar-ext ul.list-group ul.list-group .has-children i {
+        font-size: .5rem;
+    }
+}

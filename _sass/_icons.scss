@@ -1,0 +1,42 @@
+body.icons-fontawesome {
+  i::before {
+    display               : inline-block;
+    font-style            : normal;
+    font-variant          : normal;
+    font-family           : "Font Awesome 5 Free";
+    font-weight           : 900;
+    text-rendering        : auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  i.hamburger::before,
+  i.menu::before,
+  i.nav::before {
+    content: "\f0c9";
+  }
+
+  i.rocket::before,
+  i.devops::before {
+    content: "\f135";
+  }
+
+  i.code::before,
+  i.coding::before,
+  i.development::before,
+  i.dev::before,
+  i.programming::before {
+    content: "\f121";
+  }
+
+  i.com-nav-tree-item::before {
+    content: "\f111";
+  }
+
+  i.com-nav-tree-item-closed::before {
+    content: "\f054";
+  }
+
+  i.com-nav-tree-item-open::before {
+      content: "\f078";
+  }
+}
