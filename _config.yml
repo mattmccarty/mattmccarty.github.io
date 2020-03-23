@@ -38,6 +38,11 @@ ui:
     name   : fontawesome
     version: 5.12.1
 
+# Collections
+collections:
+  wiki:
+    output: true
+
 # Social Media
 twitter_username: jekyllrb
 github_username : jekyll

@@ -2,4 +2,8 @@ body.ui-fw-bootstrap {
     nav.navbar {
         width: 100%;
     }
+
+    nav.navbar .navbar-brand > i + span {
+        margin-left: .5rem;
+    }
 }

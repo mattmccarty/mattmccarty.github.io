@@ -1,21 +1,40 @@
-<ul class="list-group">
-  {% for item in site.data.sidebar.wiki %}
-    <li>
-      <div class="list-group-item list-group-item-action d-inline-flex">
-        <div class="title mr-auto">
-          <i class="{{ item.icon }}"></i>{{ item.title }}
-        </div>
-        <div class="state-icon">
-          {%- if item.children -%}
-          <i class="com-nav-tree-item-closed"></i>
-          {%- else -%}
-          <i class=""></i>
-          {%- endif -%}
-        </div>
-      </div>
-      {%- if item.children -%}
-      {%- include wiki/{{ site.ui.framework.name }}/sidebar/children.html items=item.children -%}
+<ul class="list-group expand">
+  {% assign categories = site.wiki | group_by: 'category' | where: 'name', "root" %}
+  {% for category in categories %}
+    {% assign items = category.items | sort: 'order' %}
+    {% for item in items %}
+      {%- if item.url == "/wiki/index.html" -%}
+        {%- continue -%}
       {%- endif -%}
-    </li>
+      <li>
+        {%- if item.permalink -%}
+          {%- assign permalink = item.permalink -%}
+        {%- else -%}
+          {%- assign permalink = item.url -%}
+        {%- endif -%}
+        {%- if page.url contains permalink -%}
+          {%- assign expand    = 'expand' -%}
+          {%- assign stateIcon = 'com-nav-tree-item-open' -%}
+        {%- else -%}
+          {%- assign expand    = 'collapse' -%}
+          {%- assign stateIcon = 'com-nav-tree-item-closed' -%}
+        {%- endif -%}
+        <a class="list-group-item list-group-item-action d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
+          <div class="title mr-auto">
+            <i class="{{ item.icon }}"></i>{{ item.title }}
+          </div>
+          <div class="state-icon">
+            {%- if item.children -%}
+            <i class="{{stateIcon}}"></i>
+            {%- else -%}
+            <i class=""></i>
+            {%- endif -%}
+          </div>
+        </a>
+        {%- if item.children -%}
+          {% include wiki/{{ site.ui.framework.name }}/sidebar/children.html children=item.children expand=expand %}
+        {%- endif -%}
+      </li>
+    {% endfor %}
   {% endfor %}
 </ul>

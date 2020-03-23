@@ -2,14 +2,13 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	{%- include head.html -%}
 	<body class="ui-fw-{{ site.ui.framework.name }} icons-{{ site.ui.icons.name }}">
-		{%- include wiki/{{ site.ui.framework.name }}/header.html -%}
+		{%- include home/{{ site.ui.framework.name }}/header.html -%}
 		<div class="main-container">
-			{%- include wiki/{{ site.ui.framework.name }}/sidebar/container.html -%}
+            {%- include home/{{ site.ui.framework.name }}/sidebar/container.html -%}
 			<div class="main-content">
 				{{ content }}
 			</div>
 		</div>
-		{%- include wiki/{{ site.ui.framework.name }}/footer.html -%}
 		{%- include footer.html -%}
 	</body>
 </html>

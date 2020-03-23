@@ -15,6 +15,14 @@ body.icons-fontawesome {
     content: "\f0c9";
   }
 
+  i.wiki::before {
+    content: "\f022";
+  }
+
+  i.blog::before {
+    content: "\f781";
+  }
+
   i.rocket::before,
   i.devops::before {
     content: "\f135";
