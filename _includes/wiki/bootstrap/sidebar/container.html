@@ -1,7 +1,19 @@
 
 <nav class="sidebar-ext">
-  <div class="sidebar-container">
-    <div class="card">
+  <div class="sidebar-container d-flex">
+    <div class="nav-min card collapse">
+      {%- include wiki/{{ site.ui.framework.name }}/sidebar/quicknav.html -%}
+    </div>
+    <div class="nav-max-secondary card">
+      <ul class="list-group expand">
+        <li>
+          <a class="list-group-item list-group-item-action d-inline-flex toggle" href="#">
+            <i class="min-left"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-max card">
       {%- include wiki/{{ site.ui.framework.name }}/sidebar/categories.html -%}
     </div>
   </div>

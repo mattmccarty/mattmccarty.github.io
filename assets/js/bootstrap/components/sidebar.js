@@ -16,7 +16,21 @@ var SideBarComponent = (function() {
         } else {
             sideBar.hide();
         }
-        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $(".sidebar-ext .nav-max-secondary .toggle").on("click", function(e) {
+      $(".sidebar-ext .nav-min").show();
+      $(".sidebar-ext .nav-max").hide();
+      $(".sidebar-ext .nav-max-secondary").hide();
+      e.preventDefault();
+    });
+
+    $(".sidebar-ext .nav-min .toggle").on("click", function(e) {
+      $(".sidebar-ext .nav-min").hide();
+      $(".sidebar-ext .nav-max").show();
+      $(".sidebar-ext .nav-max-secondary").show();
+      e.preventDefault();
     });
   };
 

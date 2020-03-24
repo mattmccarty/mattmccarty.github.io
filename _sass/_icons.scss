@@ -15,12 +15,26 @@ body.icons-fontawesome {
     content: "\f0c9";
   }
 
+  i.home::before {
+    content: "\f015";
+  }
+
   i.wiki::before {
     content: "\f022";
   }
 
   i.blog::before {
     content: "\f781";
+  }
+
+  i.min-left::before,
+  i.move-left::before {
+    content: "\f100";
+  }
+
+  i.max-right::before,
+  i.move-right::before {
+    content: "\f101";
   }
 
   i.rocket::before,

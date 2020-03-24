@@ -1,0 +1,21 @@
+<ul class="list-group expand">
+  <li>
+    <a class="list-group-item list-group-item-action d-inline-flex toggle" href="#">
+      <i class="max-right"></i>
+    </a>
+  </li>
+  {% assign categories = site.wiki | group_by: 'category' | where: 'name', "root" %}
+  {% for category in categories %}
+    {% assign items = category.items | sort: 'order' %}
+    {% for item in items %}
+      {%- if item.url == "/wiki/index.html" -%}
+        {%- continue -%}
+      {%- endif -%}
+      <li>
+        <a class="list-group-item list-group-item-action d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
+          <i class="{{item.icon}}"></i>
+        </a>
+      </li>
+    {% endfor %}
+  {% endfor %}
+</ul>
