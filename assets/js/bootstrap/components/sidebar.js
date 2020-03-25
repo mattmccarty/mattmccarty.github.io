@@ -1,16 +1,30 @@
 var SideBarComponent = (function() {
-  var iconPack = null;
+  var globals  = null,
+      iconPack = null,
+      sidebar  = $(".sidebar-ext .nav-max");
 
   var init = function(opt) {
-    iconPack = (typeof opt.icons !== "undefined") ? opt.icons : null;
+    globals  = (typeof opt.globals !== "undefined") ? opt.globals : null;
+    iconPack = (typeof opt.icons   !== "undefined") ? opt.icons   : null;
     initToggles();
     initItemClicks();
     initStateButtons();
+
+    $(window).resize(function() {
+      if ($('header').width() <= globals.display.size.MEDIUM) {
+        if (sidebar.is(":visible")) {
+          $(".main-content").hide();
+        }
+      } else {
+        if (sidebar.is(":hidden")) {
+          $(".main-content").show();
+        }
+      }
+    });
   };
 
   var initToggles = function() {
-    var sidebar = $(".sidebar-ext .nav-max"),
-        toggle  = $(".sidebar-toggle"),
+    var toggle  = $(".sidebar-toggle"),
         icon    = $(".sidebar-toggle > i");
 
     if (sidebar.is(":hidden")) {
@@ -21,12 +35,16 @@ var SideBarComponent = (function() {
     toggle.on("click", function(e) {
       if (sidebar.is(":hidden")) {
         sidebar.show();
+        if ($('header').width() <= globals.display.size.MEDIUM) {
+          $(".main-content").hide();
+        }
         if (icon.hasClass("max-right")) {
           icon.removeClass("max-right");
           icon.addClass("min-left");
         }
       } else {
         sidebar.hide();
+        $(".main-content").show();
         if (icon.hasClass("min-left")) {
           icon.removeClass("min-left");
           icon.addClass("max-right");
@@ -37,16 +55,19 @@ var SideBarComponent = (function() {
 
   var initItemClicks = function() {
     $(window).on("popstate", function(e) {
-      $('title').html(e.originalEvent.state.title);
-      $('.main-content').html(e.originalEvent.state.content);
-      bindLinks();
+      var title   = $("title"),
+          content = $(".main-content");
+      if (e.originalEvent.hasOwnProperty("state")) {
+        title.html(e.originalEvent.state.title);
+        content.html(e.originalEvent.state.content);
+      }
     });
 
-    $(".sidebar-ext a.list-group-item[href^='/']").on('click', function(e) {
+    $(".sidebar-ext a.list-group-item.page-load[href^='/']").on('click', function(e) {
+      e.preventDefault();
       if ($(this).hasClass("active")   === false &&
           $(this).hasClass("redirect") === false
       ) {
-        e.preventDefault();
         var url = $(this).attr('href');
         $.get(url, function(data) {
           var regex = /<title>(.*)<\/title>/g

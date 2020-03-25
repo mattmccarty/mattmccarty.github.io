@@ -16,9 +16,9 @@
         {%- endif -%}
 
         {%- if item.children -%}
-        <a class="list-group-item list-group-item-action d-inline-flex has-children {% if item.permalink == page.url or item.url == page.url == page.url %}active{% endif %}" href="{{ permalink }}">
+        <a class="list-group-item list-group-item-action page-load d-inline-flex has-children {% if item.permalink == page.url or item.url == page.url == page.url %}active{% endif %}" href="{{ permalink }}">
         {%- else -%}
-        <a class="list-group-item list-group-item-action d-inline-flex {% if item.permalink == page.url or item.url == page.url == page.url %}active{% endif %}" href="{{ permalink }}">
+        <a class="list-group-item list-group-item-action page-load d-inline-flex {% if item.permalink == page.url or item.url == page.url == page.url %}active{% endif %}" href="{{ permalink }}">
         {%- endif -%}
           <div class="state-icon">
             {%- if item.children -%}

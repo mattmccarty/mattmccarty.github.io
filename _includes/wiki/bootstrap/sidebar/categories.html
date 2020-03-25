@@ -19,7 +19,7 @@
           {%- assign expand    = 'collapse' -%}
           {%- assign stateIcon = 'com-nav-tree-item-closed' -%}
         {%- endif -%}
-        <a class="list-group-item list-group-item-action d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
+        <a class="list-group-item list-group-item-action page-load d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
           <div class="title mr-auto">
             <i class="{{ item.icon }}"></i>{{ item.title }}
           </div>
