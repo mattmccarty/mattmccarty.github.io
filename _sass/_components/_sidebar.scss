@@ -71,6 +71,7 @@ body.ui-fw-bootstrap {
     }
 
     nav.sidebar-ext ul.list-group ul.list-group {
+        display     : none;
         padding-left: .25rem;
     }
 
@@ -83,7 +84,7 @@ body.ui-fw-bootstrap {
     }
 
     nav.sidebar-ext ul.list-group ul.list-group ul.list-group {
-        padding-left: 1.25rem;
+         padding-left: 1.25rem;
     }
 
     nav.sidebar-ext ul.list-group ul.list-group li:first-child {

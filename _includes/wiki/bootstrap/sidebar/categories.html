@@ -12,14 +12,28 @@
         {%- else -%}
           {%- assign permalink = item.url -%}
         {%- endif -%}
-        {%- if page.url contains permalink -%}
-          {%- assign expand    = 'expand' -%}
-          {%- assign stateIcon = 'com-nav-tree-item-open' -%}
+        {% if item.permalink == page.url or item.url == page.url %}
+          {%- assign active       = 'active' -%}
+          {%- assign active_class = 'active' -%}
+        {%- else -%}
+          {%- assign active       = include.active -%}
+          {%- assign active_class = '' -%}
+        {% endif %}
+        {%- assign item_url     = permalink  | replace: "/index.html" "" -%}
+        {%- assign subpage      = page.url   | split: item_url  -%}
+        {%- assign subpage_size = subpage[0] | size -%}
+        {%- assign active_size  = active     | size -%}
+        {%- if subpage_size  == 0 and active_size == 0 %}
+          {%- assign expand    = 'expand'-%}
+          {%- assign stateIcon = 'com-nav-tree-item-open'-%}
+        {%- elsif page.url == item.url -%}
+          {%- assign expand    = 'expand'-%}
+          {%- assign stateIcon = 'com-nav-tree-item-open'-%}
         {%- else -%}
           {%- assign expand    = 'collapse' -%}
           {%- assign stateIcon = 'com-nav-tree-item-closed' -%}
         {%- endif -%}
-        <a class="list-group-item list-group-item-action page-load d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
+        <a class="list-group-item list-group-item-action page-load d-inline-flex {{active_class}}" href="{{ permalink }}">
           <div class="title mr-auto">
             <i class="{{ item.icon }}"></i>{{ item.title }}
           </div>
@@ -32,7 +46,7 @@
           </div>
         </a>
         {%- if item.children -%}
-          {% include wiki/{{ site.ui.framework.name }}/sidebar/children.html children=item.children expand=expand %}
+          {% include wiki/{{ site.ui.framework.name }}/sidebar/children.html children=item.children active=active expand=expand %}
         {%- endif -%}
       </li>
     {% endfor %}

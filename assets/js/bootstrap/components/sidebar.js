@@ -23,6 +23,11 @@ var SideBarComponent = (function() {
     });
   };
 
+  var initActive = function() {
+    //var parents = sidebar.find(".active").parent("ul");
+    //parents.show();
+  }
+
   var initToggles = function() {
     var toggle  = $(".sidebar-toggle"),
         icon    = $(".sidebar-toggle > i");
@@ -90,8 +95,11 @@ var SideBarComponent = (function() {
 
   var initStateButtons = function() {
     $(".sidebar-ext a.list-group-item .state-icon").on('click', function(e) {
-      itemUpdate(this);
+      itemUpdate($(this));
       e.preventDefault();
+      if ($(this).hasClass("state-icon")) {
+        e.stopPropagation();
+      }
     });
   }
 
@@ -99,22 +107,39 @@ var SideBarComponent = (function() {
     var activeChild  = $(el).next(".list-group").find(".active"),
         activeParent = $(el).closest(".list-group").prev(".active");
 
-    let iconStateContainer = $(el).children(".state-icon");
-    let iconState          = iconStateContainer.children("i");
+    let iconStateContainer = null;
+    let iconState          = null;
+    if ($(el).hasClass("state-icon")) {
+      iconStateContainer = $(el);
+      iconState          = iconStateContainer.children("i");
+    } else {
+      iconStateContainer = $(el).children(".state-icon");
+      iconState          = iconStateContainer.children("i");
+    }
     if (iconState.hasClass("com-nav-tree-item-closed")) {
       iconState.removeClass("com-nav-tree-item-closed");
       iconState.addClass("com-nav-tree-item-open");
-      $(el).next(".list-group").show(); 
+      if ($(el).hasClass("state-icon")) {
+        $(el).parent().next(".list-group").show();
+      } else {
+        $(el).next(".list-group").show();
+      }
     } else if (iconState.hasClass("com-nav-tree-item-open")) {
       if (activeChild.length <= 0 && activeParent.length <= 0) {
         iconState.removeClass("com-nav-tree-item-open");
         iconState.addClass("com-nav-tree-item-closed");
-        $(el).next(".list-group").hide();
+        if ($(el).hasClass("state-icon")) {
+          $(el).parent().next(".list-group").hide();
+        } else {
+          $(el).next(".list-group").hide();
+        }
       }
     }
 
-    $(".sidebar-ext .list-group-item").removeClass("active");
-    $(el).addClass("active");
+    if ($(el).hasClass("state-icon") == false) {
+      $(".sidebar-ext .list-group-item").removeClass("active");
+      $(el).addClass("active");
+    }
   };
   
   return {
