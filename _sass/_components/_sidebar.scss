@@ -105,7 +105,11 @@ body.ui-fw-bootstrap {
         font-size: .5rem;
     }
 
-    /* Quicknav and */
+    /* Quicknav */
+    .sidebar-container .nav-min {
+        min-width: 3.45rem;
+    }
+
     nav.sidebar-ext .nav-min ul.list-group .list-group-item-container,
     nav.sidebar-ext .nav-min ul.list-group .list-group-item-container,
     nav.sidebar-ext .nav-min ul.list-group i,
