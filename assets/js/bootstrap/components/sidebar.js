@@ -80,6 +80,10 @@ var SideBarComponent = (function() {
           }, title, url);
         });
         itemUpdate(this);
+
+        if ($('header').width() <= globals.display.size.MEDIUM) {
+          $(".sidebar-ext .nav-min .sidebar-toggle").trigger("click");
+        }
       }
     });
   };
