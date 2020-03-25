@@ -1,21 +1,27 @@
 <ul class="list-group expand">
-  <li>
-    <a class="list-group-item list-group-item-action d-inline-flex toggle" href="#">
-      <i class="max-right"></i>
+  <li class="list-group-item-container">
+    <a class="list-group-item list-group-item-action sidebar-toggle" href="#">
+      <i class="min-left"></i>
     </a>
   </li>
-  {% assign categories = site.wiki | group_by: 'category' | where: 'name', "root" %}
-  {% for category in categories %}
-    {% assign items = category.items | sort: 'order' %}
-    {% for item in items %}
-      {%- if item.url == "/wiki/index.html" -%}
-        {%- continue -%}
-      {%- endif -%}
-      <li>
-        <a class="list-group-item list-group-item-action d-inline-flex {% if item.permalink == page.url or item.url == page.url %}active{% endif %}" href="{{ permalink }}">
-          <i class="{{item.icon}}"></i>
-        </a>
-      </li>
-    {% endfor %}
-  {% endfor %}
+  <li class="list-group-item-container">
+    <a class="list-group-item list-group-item-action disabled" href="#">
+      <i class="select-all"></i>
+    </a>
+  </li>
+  <li class="list-group-item-container">
+    <a class="list-group-item list-group-item-action disabled" href="#">
+      <i class="copy"></i>
+    </a>
+  </li>
+  <li class="list-group-item-container">
+    <a class="list-group-item list-group-item-action disabled" href="#">
+      <i class="facebook"></i>
+    </a>
+  </li>
+  <li class="list-group-item-container">
+    <a class="list-group-item list-group-item-action disabled" href="#">
+      <i class="twitter"></i>
+    </a>
+  </li>
 </ul>

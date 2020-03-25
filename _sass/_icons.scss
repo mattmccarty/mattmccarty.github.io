@@ -27,6 +27,31 @@ body.icons-fontawesome {
     content: "\f781";
   }
 
+  i.rss::before {
+    content: "\f09e";
+  }
+
+  i.facebook::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f082";
+  }
+
+  i.twitter::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f081";
+  }
+
+  i.select-all::before,
+  i.check-all::before,
+  i.tasks::before {
+    content: "\f0ae";
+  }
+
+  i.clipboard::before,
+  i.copy::before {
+    content: "\f328";
+  }
+
   i.min-left::before,
   i.move-left::before {
     content: "\f100";

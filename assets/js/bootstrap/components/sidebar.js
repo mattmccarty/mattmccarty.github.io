@@ -9,28 +9,29 @@ var SideBarComponent = (function() {
   };
 
   var initToggles = function() {
-    $(".sidebar-toggle").on("click", function(e) {
-        var sideBar = $(".sidebar-ext");
-        if (sideBar.is(":hidden")) {
-            sideBar.show();
-        } else {
-            sideBar.hide();
+    var sidebar = $(".sidebar-ext .nav-max"),
+        toggle  = $(".sidebar-toggle"),
+        icon    = $(".sidebar-toggle > i");
+
+    if (sidebar.is(":hidden")) {
+      icon.removeClass("min-left");
+      icon.addClass("max-right");
+    }
+  
+    toggle.on("click", function(e) {
+      if (sidebar.is(":hidden")) {
+        sidebar.show();
+        if (icon.hasClass("max-right")) {
+          icon.removeClass("max-right");
+          icon.addClass("min-left");
         }
-        e.preventDefault();
-    });
-
-    $(".sidebar-ext .nav-max-secondary .toggle").on("click", function(e) {
-      $(".sidebar-ext .nav-min").show();
-      $(".sidebar-ext .nav-max").hide();
-      $(".sidebar-ext .nav-max-secondary").hide();
-      e.preventDefault();
-    });
-
-    $(".sidebar-ext .nav-min .toggle").on("click", function(e) {
-      $(".sidebar-ext .nav-min").hide();
-      $(".sidebar-ext .nav-max").show();
-      $(".sidebar-ext .nav-max-secondary").show();
-      e.preventDefault();
+      } else {
+        sidebar.hide();
+        if (icon.hasClass("min-left")) {
+          icon.removeClass("min-left");
+          icon.addClass("max-right");
+        }
+      }
     });
   };
 

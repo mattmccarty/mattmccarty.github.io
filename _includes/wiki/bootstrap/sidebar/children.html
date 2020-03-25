@@ -3,7 +3,7 @@
   <ul class="list-group {{include.expand}}">
     {% assign items = site.wiki | where: "category", {{child}} | sort: 'order' %}
     {% for item in items -%}
-      <li>
+      <li class="list-group-item-container">
         {%- if item.permalink -%}
           {%- assign permalink = item.permalink -%}
         {%- else -%}

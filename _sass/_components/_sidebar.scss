@@ -19,7 +19,13 @@ body.ui-fw-bootstrap {
     }
 
     nav.sidebar-ext ul.list-group .list-group-item {
-        padding: .75rem 1.15rem;
+        padding     : .75rem 1.15rem;
+        border-left : 0;
+        border-right: 0;
+    }
+
+    nav.sidebar-ext ul.list-group .list-group-item-container + .list-group-item-container > .list-group-item {
+        border-top: 0;
     }
 
     nav.sidebar-ext ul.list-group .list-group-item,
@@ -49,6 +55,10 @@ body.ui-fw-bootstrap {
     nav.sidebar-ext ul.list-group a.list-group-item:hover,
     nav.sidebar-ext ul.list-group a.list-group-item.active:hover {
         background-color: rgb(235, 236, 240);
+    }
+
+    nav.sidebar-ext ul.list-group .list-group-item.disabled > i {
+        color: #a7a7a7;
     }
 
     nav.sidebar-ext ul.list-group .list-group-item i {
@@ -95,26 +105,9 @@ body.ui-fw-bootstrap {
         font-size: .5rem;
     }
 
-    /* Secondary nav */
-    nav.sidebar-ext .nav-max-secondary {
-        background-color: transparent;
-    }
-
-    nav.sidebar-ext .nav-max-secondary ul.list-group li,
-    nav.sidebar-ext .nav-max-secondary ul.list-group li,
-    nav.sidebar-ext .nav-max-secondary ul.list-group i,
-    nav.sidebar-ext .nav-max-secondary ul.list-group a.list-group-item,
-    nav.sidebar-ext .nav-max-secondary ul.list-group a.list-group-item:hover,
-    nav.sidebar-ext .nav-max-secondary ul.list-group a.list-group-item:visited,
-    nav.sidebar-ext .nav-max-secondary ul.list-group a.list-group-item:active {
-        min-width   : unset;
-        width       : 100%;
-        margin-right: unset;
-    }
-
-    /* Quicknav and secondary nav */
-    nav.sidebar-ext .nav-min ul.list-group li,
-    nav.sidebar-ext .nav-min ul.list-group li,
+    /* Quicknav and */
+    nav.sidebar-ext .nav-min ul.list-group .list-group-item-container,
+    nav.sidebar-ext .nav-min ul.list-group .list-group-item-container,
     nav.sidebar-ext .nav-min ul.list-group i,
     nav.sidebar-ext .nav-min ul.list-group a.list-group-item,
     nav.sidebar-ext .nav-min ul.list-group a.list-group-item:hover,
@@ -123,5 +116,11 @@ body.ui-fw-bootstrap {
         min-width   : unset;
         width       : 100%;
         margin-right: unset;
+    }
+
+    @media (max-width: 768px) {
+        nav.sidebar-ext .nav-max {
+            width: 100vw;
+        }
     }
 }
