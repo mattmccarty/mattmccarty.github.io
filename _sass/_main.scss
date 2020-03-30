@@ -6,9 +6,15 @@ html, body {
     overflow-x: hidden;
 }
 
+body.layout-home,
+body.layout-home header.navbar {
+    background-color: #1a1a1a;
+}
+
 header {
     width: 100%;
 }
+
 
 .main-container {
     width     : 100%;
@@ -25,5 +31,6 @@ header {
 
 @import 'highlight';
 @import 'icons';
+@import 'shapes';
 @import '_components/navbar';
 @import '_components/sidebar';

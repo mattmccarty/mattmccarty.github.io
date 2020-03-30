@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-	{%- include head.html -%}
-	<body class="ui-fw-{{ site.ui.framework.name }} icons-{{ site.ui.icons.name }}">
-		{%- include home/{{ site.ui.framework.name }}/header.html -%}
+  {%- include head.html -%}
+  <!--
+    https://kennethormandy.com/journal/pure-css-lettering-a-bad-and-fun-idea/
+    https://tympanus.net/Tutorials/CustomCursors/index.html
+  -->
+	<body class="layout-home ui-fw-{{ site.ui.framework.name }} icons-{{ site.ui.icons.name }}">
+    {%- include home/{{ site.ui.framework.name }}/header.html -%}
 		<div class="main-container">
-            {%- include home/{{ site.ui.framework.name }}/sidebar/container.html -%}
-			<div class="main-content">
-				{{ content }}
+			<div class="main-content d-flex flex-nowrap justify-content-center align-items-center">
+
+        <div class="letter-wrapper">
+          <div class="letter M">
+            <p>M</p>
+            <div class="element semi-circle top"></div>
+            <div class="element semi-circle bottom "></div>
+            <div class="element semi-circle left"></div>
+            <div class="element semi-circle left"></div>
+            <div class="element semi-circle right"></div>
+            <div class="element semi-circle right"></div>
+            <div class="element semi-circle top"></div>
+            <div class="element semi-circle bottom"></div>
+            <div class="element semi-circle left"></div>
+            <div class="element semi-circle left"></div>
+            <div class="element semi-circle right"></div>
+            <div class="element semi-circle right"></div>
+            <div class="element semi-circle bottom"></div>
+            <div class="element semi-circle left"></div>
+            <div class="element semi-circle right"></div>
+            <div class="element line vertical left"></div>
+            <div class="element line vertical center"></div>
+            <div class="element line vertical right"></div>
+            <div class="element electron left"></div>
+            <div class="element electron center"></div>
+            <div class="element electron right"></div>
+          </div>
+        </div>
+
 			</div>
-		</div>
-		{%- include footer.html -%}
+    </div>
+    {%- include footer.html -%}
 	</body>
 </html>
