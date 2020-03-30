@@ -11,8 +11,12 @@ html.layout-home {
 }
 
 html.layout-home body,
-html.layout-home header.navbar {
+html.layout-home header .navbar {
     background-color: #1a1a1a;
+}
+
+html.layout-home header .navbar {
+    position: fixed;
 }
 
 header {
