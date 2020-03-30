@@ -18,6 +18,12 @@ Author URI: http://c4rin3.vituelles.fr
     margin-top: -29em;
   }
 
+  @media (max-width: 768px) {
+    .letter-wrapper {
+        padding: 0 20em 0 20em;
+    }
+  }
+
   .letter-wrapper p {
     display: none;
   }
