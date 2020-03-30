@@ -6,8 +6,12 @@ html, body {
     overflow-x: hidden;
 }
 
-body.layout-home,
-body.layout-home header.navbar {
+html.layout-home {
+    overflow: hidden;
+}
+
+html.layout-home body,
+html.layout-home header.navbar {
     background-color: #1a1a1a;
 }
 

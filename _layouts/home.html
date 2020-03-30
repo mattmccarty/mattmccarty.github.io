@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html class="layout-home" lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
   <!--
     https://kennethormandy.com/journal/pure-css-lettering-a-bad-and-fun-idea/
     https://tympanus.net/Tutorials/CustomCursors/index.html
   -->
-	<body class="layout-home ui-fw-{{ site.ui.framework.name }} icons-{{ site.ui.icons.name }}">
+	<body class="ui-fw-{{ site.ui.framework.name }} icons-{{ site.ui.icons.name }}">
     {%- include home/{{ site.ui.framework.name }}/header.html -%}
 		<div class="main-container">
 			<div class="main-content d-flex flex-nowrap justify-content-center align-items-center">
