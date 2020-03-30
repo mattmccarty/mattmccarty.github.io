@@ -195,7 +195,7 @@ Author URI: http://c4rin3.vituelles.fr
   }
   @keyframes move-electron-up {
     0%   { top: calc(50% - 6em); }
-    100% { top: 13em; }
+    100% { top: 37em; }
   }
   @keyframes glow-electron {
     0%  { background-color: yellow; box-shadow: 0 0 10px orange; border-color: orange; }
@@ -317,9 +317,9 @@ Author URI: http://c4rin3.vituelles.fr
     left   : 10em;
   }
   .letter.M .line.vertical.center {
-    height     : calc(50% - 19em);
+    height     : calc(50% - 47em);
     left       : unset;
-    top        : $letter_m_size_sm;
+    top        : 43em;
     position   : relative;
   }
   .letter.M .line.vertical.right {
