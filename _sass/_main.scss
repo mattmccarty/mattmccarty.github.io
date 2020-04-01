@@ -6,17 +6,38 @@ html, body {
     overflow-x: hidden;
 }
 
-html.layout-home {
-    overflow: hidden;
-}
-
-html.layout-home body,
-html.layout-home header .navbar {
-    background-color: #1a1a1a;
+html.layout-home body {
+    background-color: #1d1d1d;
 }
 
 html.layout-home header .navbar {
-    border-bottom: 1px solid #292929;
+    background-color: #181818;
+    position        : fixed;
+}
+
+html.layout-home .intro {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size  : 2.5em;
+    color      : white;
+    padding    : 3.5rem 4rem;
+
+    @media (max-width: 768px) {
+        & {
+            padding: 3.5rem 1rem;
+        }
+
+        p.heading {
+            margin-bottom: 1em;
+        }
+    }
+
+    span.name {
+        color: #00c4ff;
+    }
+
+    span.title {
+        color: #8eff38;
+    }
 }
 
 header {
@@ -39,6 +60,5 @@ header {
 
 @import 'highlight';
 @import 'icons';
-@import 'shapes';
 @import '_components/navbar';
 @import '_components/sidebar';
