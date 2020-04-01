@@ -1,3 +1,13 @@
+html.layout-home body.ui-fw-bootstrap {
+  .navbar .nav-link {
+    color: white;
+
+    &.disabled {
+      color: rgba(255,255,255,.25);
+    }
+  }
+}
+
 body.ui-fw-bootstrap {
   nav.navbar {
     width: 100%;
