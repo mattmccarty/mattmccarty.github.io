@@ -6,6 +6,12 @@ html.layout-home body.ui-fw-bootstrap {
       color: rgba(255,255,255,.25);
     }
   }
+
+  @media (max-width: 255px) {
+    .navbar .nav-link span {
+        display: none;
+    }
+  }
 }
 
 body.ui-fw-bootstrap {
