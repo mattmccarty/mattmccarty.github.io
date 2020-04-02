@@ -78,6 +78,10 @@ var SideBarComponent = (function() {
           var regex = /<title>(.*)<\/title>/g
           var title = regex.exec(data)[1];
           $('title').html(title);
+          regex = /<meta name="description"(.*)>/g
+          var desc = $(regex.exec(data)[0]).attr("content");
+          $('meta[name="description"]').attr("content", desc);
+          $('meta[property="og:description"]').attr("content", desc);
           $('.main-content').html($(data).find('.main-content').html());
           history.pushState({
               'title'  : $('title').html(),

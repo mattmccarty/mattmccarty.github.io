@@ -1,12 +1,15 @@
 ---
-layout   : wiki
-name     : devops
-title    : DevOps
-icon     : devops
-category : root
-order    : 1
-permalink: /wiki/devops
-children :
+layout     : wiki
+author     : Matt McCarty
+date       : 2020-04-01
+name       : devops
+title      : DevOps
+description: An introduction to DevOps.
+icon       : devops
+category   : root
+order      : 1
+permalink  : /wiki/devops
+children   :
     - devops
     - scm
     - containers

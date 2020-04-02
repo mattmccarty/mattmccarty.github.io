@@ -1,9 +1,13 @@
 ---
-layout  : wiki
-title   : Welcome to the Wiki
-icon    : none
-category: root
-order   : 0
+layout     : wiki
+author     : Matt McCarty
+date       : 2020-04-01
+name       : wiki
+title      : Welcome to the Wiki
+description: The wiki introduction. What it is and why it's here.
+icon       : none
+category   : root
+order      : 0
 ---
 # Wiki
 Engineers face complex problems every day. Many on the internet promise solutions to fulfill our needs. Like the commercial used to say, "We have an app for that." The problem is that it takes time, money, and resources to read through the documentation, install the pieces, familiarize ourselves, and get our company's buy-in. In this industry, time is rarely our side. We perform a quick search and implement a solution that appears to work for most. Once the solution is implemented, we discover missing features or bugs that were overlooked in our initial evaluation. The wiki will serve as a learning and documentation resource for myself and others.
