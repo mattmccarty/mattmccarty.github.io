@@ -1,61 +1,57 @@
 html, body {
-    width     : 100%;
-    min-height: 100vh;
-    padding   : 0;
-    margin    : 0;
-    overflow-x: hidden;
+  width     : 100%;
+  min-height: 100vh;
+  padding   : 0;
+  margin    : 0;
+  overflow-x: hidden;
 }
 
 html.layout-home body {
-    background-color: #1d1d1d;
-}
-
-html.layout-home header .navbar {
-    background-color: #181818;
-    position        : fixed;
+  background-color: #1d1d1d;
 }
 
 html.layout-home .intro {
-    font-family: 'Liu Jian Mao Cao', cursive;
-    font-size  : 2.5em;
-    color      : white;
-    padding    : 3.5rem 4rem;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size  : 2.5em;
+  color      : white;
+  padding    : 3.5rem 4rem;
 
-    @media (max-width: 768px) {
-        & {
-            padding: 3.5rem 2.6rem;
-        }
+  p.body {
+    font-size: 0.8em;
+  }
 
-        p.heading {
-            margin-bottom: 1em;
-        }
+  span.name {
+    color      : #00c4ff;
+    white-space: nowrap;
+  }
+
+  span.title {
+    color: #8eff38;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 3.5rem 2.6rem;
     }
-
-    span.name {
-        color: #00c4ff;
-    }
-
-    span.title {
-        color: #8eff38;
-    }
+  }
 }
 
 header {
-    width: 100%;
+  width: 100%;
 }
 
 
 .main-container {
-    width     : 100%;
-    min-height: 100vh;
-    display   : -webkit-inline-box !important;
-    display   : -ms-inline-flexbox !important;
-    display   : inline-flex !important;
+  width     : 100%;
+  min-height: 100vh;
+  display   : -webkit-inline-box !important;
+  display   : -ms-inline-flexbox !important;
+  display   : inline-flex !important;
 }
 
 .main-content {
-    width     : 100%;
-    padding   : .75rem 1rem;
+  width     : 100%;
+  padding   : .75rem 1rem;
 }
 
 @import 'highlight';
