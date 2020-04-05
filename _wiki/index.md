@@ -20,3 +20,66 @@ The wiki will be divided into various topics. The root of each will contain a sy
 ## Design
 
 The design should be responsive to support mobile phones, tablets, and desktop devices. It should also be optimized to take advantage of as much screen real estate as possible. The goal is to provide access to information on any device or location. The design and features will change with time. The current design was created, so that content can start being created and accessed.
+
+## Outline
+
+The articles in this section are a work inprogress. The list below serves as an outline. It will change over time.
+
+- programming:
+    - todo
+- source code management:
+    - Git
+        - git-media
+        - git-lfs
+        - git-portal
+        - git-annex
+    - Mercurial
+    - Perforce
+    - Subversion
+    - Comparison
+- devops:
+  - containers:
+    - Todo
+  - container orchestration:
+    - Docker Swarm
+    - Kubernetes
+    - EC2 Container Service (ECS)
+    - Azure Container Service (ACS)
+    - Google Container Engine (GCE)
+    - Cloud Foundry’s Diego
+    - CoreOS
+    - Mesosphere Marathon
+    - Comparison
+  - continuous integration:
+    - Introduction
+    - Tools
+      - Jenkins
+      - TravisCI
+      - CircleCI
+      - SemaphoreCI
+      - Atlassian
+        - Bitbucket Pipelines
+        - Bamboo
+      - CodeShip
+      - Werker
+      - BuildBot
+      - Drone.io
+      - TeamCity
+      - CodePipeline
+      - Comparison
+  - continuous delivery
+    - Introduction
+    - Tools
+      - Jenkins
+      - Jenkins X
+      - Atlassian
+        - Bitbucket Pipelines
+        - Bamboo
+      - Spinnaker
+      - Argo
+      - Tekton
+      - Harness
+      - CodeFresh
+      - CodeShip
+      - CodePipeline
+      - Comparison

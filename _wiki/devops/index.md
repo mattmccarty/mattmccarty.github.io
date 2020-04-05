@@ -19,6 +19,7 @@ children   :
 
 DevOps is a philosophical trend. It combines development with operational teams, by using a wide array of tools and practices, to continuously compile and distribute applications.
 
+
 ## Further Reading
 
 - [Wikipedia - DevOps](https://en.wikipedia.org/wiki/DevOps)

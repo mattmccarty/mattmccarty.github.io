@@ -13,7 +13,7 @@ children   :
 ---
 # Continuous Integration
 
-Continuous Integration (CI) is the implementation of tools and processes, which automatically compile, test, and package source code changes from multiple contributers.
+Continuous Integration (CI) is the implementation of tools and processes, which automatically build and test source code changes.
 
 ## Further Reading
 
