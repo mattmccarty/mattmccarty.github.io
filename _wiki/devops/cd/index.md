@@ -19,5 +19,5 @@ Continuous Deployment is sometimes confused with [Continous Delivery](https://en
 
 ## Further Reading
 
-- https://en.wikipedia.org/wiki/Continuous_deployment
-- https://www.atlassian.com/continuous-delivery/continuous-deployment
+- [Wikipedia - Continuous Deployment]()https://en.wikipedia.org/wiki/Continuous_deployment)
+- [Atlassian - Continuous Deployment](https://www.atlassian.com/continuous-delivery/continuous-deployment)
