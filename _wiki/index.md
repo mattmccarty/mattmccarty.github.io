@@ -77,9 +77,9 @@ The articles in this section are a work inprogress. The list below serves as an 
     - Kubernetes
         - Minikube
         - Cloud Services
-            - GCE   - Google Container Engine
-            - EKS   - Amazon Kubernetes Service
+            - EKS   - Elastic Kubernetes Service
             - ACS   - Azure Container Service
+            - GCE   - Google Container Engine
             - DOKS  - Digital Ocean Kubernetes Service
             - IBMKS - IBM Kubernetes Service
         - KOPS - Kubernetes Operations
