@@ -87,6 +87,7 @@ The articles in this section are a work inprogress. The list below serves as an 
     - EC2 Container Service (ECS)
     - Cloud Foundry’s Diego
     - CoreOS
+    - CoreOS Fleet
     - Mesosphere Marathon
     - Comparison
   - Continuous Integration:
