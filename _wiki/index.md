@@ -84,7 +84,8 @@ The articles in this section are a work inprogress. The list below serves as an 
             - IBMKS - IBM Kubernetes Service
         - KOPS - Kubernetes Operations
         - Comparison
-    - EC2 Container Service (ECS)
+    - Elastic Container Service (ECS)
+    - AWS Fargate
     - Cloud Foundry’s Diego
     - CoreOS
     - CoreOS Fleet
