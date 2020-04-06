@@ -25,32 +25,69 @@ The design should be responsive to support mobile phones, tablets, and desktop d
 
 The articles in this section are a work inprogress. The list below serves as an outline. It will change over time.
 
-- programming:
+- Programming:
     - todo
-- source code management:
+- Source Code Management:
     - Git
-        - git-media
-        - git-lfs
-        - git-portal
-        - git-annex
+        - Plugins
+            - git-media
+            - git-lfs
+            - git-portal
+            - git-annex
     - Mercurial
     - Perforce
     - Subversion
     - Comparison
-- devops:
-  - containers:
-    - Todo
-  - container orchestration:
+- DevOps:
+  - Cloud Native Computing Foundation (CNCF)
+  - Cloud Providers
+    - Amazon
+    - Microsoft
+    - Google
+    - Digital Ocean
+    - IBM
+    - Oracle
+  - Containers:
+    - Standards
+        - Open Container Initiative (OCI)
+        - Container Runtime Interface (CRI)
+        - AppC
+    - Runtimes
+        - High-Level
+            - Docker
+            - CRI-O
+            - Rocket (Rkt)
+            - Clear Containers (Intel)
+            - Kata
+            - Frakti
+        - Low-Level
+            - libvirt
+            - lxc
+            - systemd-nspawn
+            - lmctfy
+            - libcontainer
+            - runC
+            - runV
+            - Containerd
+  - Container Orchestration:
+    - Docker Compose
     - Docker Swarm
     - Kubernetes
+        - Minikube
+        - Cloud Services
+            - GCE   - Google Container Engine
+            - EKS   - Amazon Kubernetes Service
+            - ACS   - Azure Container Service
+            - DOKS  - Digital Ocean Kubernetes Service
+            - IBMKS - IBM Kubernetes Service
+        - KOPS - Kubernetes Operations
+        - Comparison
     - EC2 Container Service (ECS)
-    - Azure Container Service (ACS)
-    - Google Container Engine (GCE)
     - Cloud Foundry’s Diego
     - CoreOS
     - Mesosphere Marathon
     - Comparison
-  - continuous integration:
+  - Continuous Integration:
     - Introduction
     - Tools
       - Jenkins
@@ -67,7 +104,7 @@ The articles in this section are a work inprogress. The list below serves as an 
       - TeamCity
       - CodePipeline
       - Comparison
-  - continuous delivery
+  - Continuous Delivery
     - Introduction
     - Tools
       - Jenkins
