@@ -60,6 +60,7 @@ The articles in this section are a work inprogress. The list below serves as an 
             - Clear Containers (Intel)
             - Kata
             - Frakti
+            - Comparison
         - Low-Level
             - libvirt
             - lxc
@@ -69,6 +70,7 @@ The articles in this section are a work inprogress. The list below serves as an 
             - runC
             - runV
             - Containerd
+            - Comparison
   - Container Orchestration:
     - Docker Compose
     - Docker Swarm
