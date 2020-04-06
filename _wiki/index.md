@@ -62,14 +62,14 @@ The articles in this section are a work inprogress. The list below serves as an 
             - Frakti
             - Comparison
         - Low-Level
-            - libvirt
-            - lxc
-            - systemd-nspawn
-            - lmctfy
-            - libcontainer
             - runC
             - runV
             - Containerd
+            - libcontainer
+            - lxc
+            - libvirt
+            - systemd-nspawn
+            - lmctfy
             - Comparison
   - Container Orchestration:
     - Docker Compose
@@ -124,3 +124,4 @@ The articles in this section are a work inprogress. The list below serves as an 
       - CodeShip
       - CodePipeline
       - Comparison
+  - Continuous Deployment
