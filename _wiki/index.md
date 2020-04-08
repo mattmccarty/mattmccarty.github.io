@@ -89,6 +89,7 @@ The articles in this section are a work inprogress. The list below serves as an 
     - Cloud Foundry’s Diego
     - CoreOS
     - CoreOS Fleet
+    - Apache Mesos
     - Mesosphere Marathon
     - Comparison
   - Continuous Integration:
