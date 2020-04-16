@@ -91,6 +91,7 @@ The articles in this section are a work inprogress. The list below serves as an 
     - CoreOS Fleet
     - Apache Mesos
     - Mesosphere Marathon
+    - [Nomad](https://www.nomadproject.io/)
     - Comparison
   - Continuous Integration:
     - Introduction
