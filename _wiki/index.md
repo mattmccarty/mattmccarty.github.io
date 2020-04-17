@@ -112,6 +112,7 @@ The articles in this section are a work inprogress. The list below serves as an 
       - Comparison
   - Continuous Delivery
     - Introduction
+    - [CD Foundation](https://cd.foundation/)
     - Tools
       - Jenkins
       - Jenkins X
